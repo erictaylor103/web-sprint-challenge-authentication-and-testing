@@ -45,14 +45,15 @@ router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (isValid(req.body)) {
-    Users.findBy({ username: username })
-      .then(([user]) => {
-        console.log("user:", user);
+    Users.findBy({ username }).first()
+      .then((user) => {
+        console.log("Anotheruser:", user);
 
         // compare the password the hash stored in the database
         if (user && bcryptjs.compareSync(password, user.password)) {
           const token = createToken(user);
-
+          console.log("user:", user);
+          
           res.status(200).json({ token, message: "Welcome to our API" }); //send the token and the message
         } else {
           res.status(401).json({ message: "Invalid credentials" });
