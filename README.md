@@ -26,11 +26,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+    Sessions: Session based authentication is one in which the user state is stored on the server’s memory. When using a session based auth system, the server creates and stores the session data in the server memory when the user logs in and then stores the session Id in a cookie on the user browser
+
+    Token Based: Token based authentication is one in which the user state is stored on the client.In the token based authentication, the user data is encrypted into a JWT (JSON Web Token) with a secret and then sent back to the client.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+    bcrupt was designed for password hashing. it is a slow algorithm. This is good for password hasing as it reduces the number of passwrods by second an attacker could could hash. Bcrypt forces us to follow security best practices as it requires a salt as part of the hasing process. Hashing combined with salts protects us better from any hacker attacks on passwords/login details.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+    Unit testing is a type of testing to check if the small piece of code is doing what it is suppose to do, whereas Integration testing is a type of testing to check if different pieces of the modules are working together.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+    Test Driven Development leads to more modularized, flexible & extensible code. That is due to the fact that the methodology requires that the developers think of the software in terms of small units that can be written and tested independently and integrated together later. This leads to smaller, more focused classes, looser coupling & cleaner interfaces.
+
+    -Forces you to write small classes focused on one thing
+    -Identify the error/problem quickly
+    -Less time spent in the debugger
+    -Reduces bugs
+    
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
